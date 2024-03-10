@@ -1,0 +1,38 @@
+@startuml Class
+
+class Object
+class Game
+class Entity
+class Enemy
+class Player
+class Alien
+class Bullet
+class Shield
+class SpriteManager
+class Hitbox
+
+struct Health
+struct MoveComponent
+struct Time
+struct WindowSettings
+struct GameManager
+
+header Libraries
+
+Object <|-- Entity
+Object <|-- Bullet
+Object <|-- Shield
+Entity <|-- Player
+Entity <|-- Enemy
+Enemy <|-- Alien
+Game -UP-o SpriteManager
+Object -right-o Hitbox
+
+
+Game -- Time
+Entity -- Health
+Entity -- MoveComponent
+Game -- GameManager
+Game -- WindowSettings
+
+@enduml

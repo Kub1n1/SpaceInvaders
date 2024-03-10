@@ -1,0 +1,18 @@
+@startuml structure
+
+class Game
+class Entity
+
+struct Health
+struct MoveComponent
+struct Time
+struct WindowSettings
+struct GameManager
+
+Game -- Time
+Game -- WindowSettings
+Game -- GameManager
+Entity -- MoveComponent
+
+
+@enduml
